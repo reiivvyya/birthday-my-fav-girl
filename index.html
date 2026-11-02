@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:linear-gradient(140deg,#ffe5ef,#fff5e9,#ffdce9);font-family:Nunito,sans-serif;color:#a64e70;overflow-x:hidden;min-height:100vh}
+button{border:0;cursor:pointer;font:inherit}
+.wrap{max-width:500px;width:92%;margin:auto;padding:30px 0;text-align:center;position:relative;z-index:1}
+.card{background:#ffffffdf;border:2px solid white;border-radius:28px;padding:25px 20px;box-shadow:0 12px 35px #d77b9833}
+h1{font-family:Pacifico,cursive;color:#df719c;font-size:35px;margin:15px 0}
+p{line-height:1.8}
+button{background:linear-gradient(135deg,#ff9fbd,#dc5d8b);color:white;padding:13px 24px;border-radius:30px;font-weight:800;box-shadow:0 5px 0 #c94d7b;margin-top:18px}
+button:active{transform:translateY(3px)}
+#page2,#page3,#page4,#page5{display:none}
+.big{font-size:85px;margin:20px}
+.letter{background:#fffafd;border-radius:22px;padding:22px;text-align:left;font-size:14px;line-height:1.9}
+.letter p{margin-bottom:15px}
+.letter h2{text-align:center;font-family:Pacifico;color:#df719c;margin-bottom:20px}
+.envelope{font-size:100px;cursor:pointer;animation:bounce 1.5s infinite}
+@keyframes bounce{50%{transform:translateY(-12px)}}
+.heart{position:fixed;bottom:-30px;animation:up 9s linear infinite;pointer-events:none}
+@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10}
+.footer{font-size:12px;margin:25px}
+</style>
+</head>
+<body>
+<div id="confetti"></div>
+
+<main class="wrap">
+
+<section id="page1" class="card">
+<div class="big">🎀</div>
+<h1>Hey, Birthday Girl!</h1>
+<p>I made something special just for you.</p>
+<p>Are you ready for your little surprise, sayanggg?</p>
+<button onclick="go(2)">Open your surprise ♡</button>
+</section>
+
+<section id="page2" class="card">
+<div class="big">🎂</div>
+<h1>Happy Birthday!</h1>
+<p>Today is your special day!</p>
+<p>Make a wish before we continue, my love.</p>
+<div class="big" id="candle">🕯️</div>
+<button onclick="wish()">Blow the candle! ✨</button>
+<p id="wishText"></p>
+</section>
+
+<section id="page3" class="card">
+<div class="big">💌</div>
+<h1>A Letter For You</h1>
+<p>I have something to tell you...</p>
+<div class="envelope" onclick="go(4)">💌</div>
+<p>Tap the letter to open it ♡</p>
+</section>
+
+<section id="page4" class="card">
+<div class="letter">
+<h2>For My Favorite Girl ♡</h2>
+
+<p>happy birthday sayanggg, happy birthday to my favorite person. ❤️</p>
+
+<p>akhirnya hari ini hari ulang tahun kamu, orang yang paling aku sayang. semoga di umur kamu yang sekarang, kamu selalu bahagia, sehat, panjang umur, dan semua yang kamu inginkan bisa tercapai yaa. aku berharap hari-hari kamu ke depannya bakal jauh lebih baik, penuh kebahagiaan, dan selalu ada alasan buat kamu tersenyum.</p>
+
+<p>makasih udah hadir di hidup aku, makasih udah jadi bagian dari hari-hari aku, makasih buat semua hal kecil yang kamu lakuin. aku seneng banget bisa kenal kamu dan punya kamu di hidup aku. maaf ya kalau selama ini aku masih sering bikin kamu kesel, masih banyak kurangnya, atau belum bisa jadi pacar yang kamu harapin. aku bakal terus belajar buat jadi lebih baik buat kamu.</p>
+
+<p>i hope you know how special you are to me. jangan pernah ngerasa kamu sendirian ya sayang, aku selalu berharap kamu bisa bahagia dan ngerasa dicintai. semoga hubungan kita bisa terus berjalan dengan baik, bisa saling ngerti, saling jaga, dan nggak gampang nyerah satu sama lain.</p>
+
+<p>maaf ya sayang, aku belum bisa ngasih apa-apa buat kamu di hari spesial kamu ini. maaf belum bisa bikin hari ini jadi lebih istimewa dengan sesuatu yang bisa kamu pegang. tapi tunggu nanti yaa, aku pengen bisa ngasih sesuatu buat kamu, walaupun sederhana, semoga bisa bikin kamu seneng. jangan sedih yaa, yang penting kamu tahu kalau aku sayang banget sama kamu. i hope someday i can give you more than just words. ❤️</p>
+
+<p>once again, happy birthday my love. i love you so much, more than words can say. semoga aku masih bisa ngerayain banyak ulang tahun kamu ke depannya. stay happy, stay healthy, and always be my favorite girl. love youuu. 💗</p>
+
+<p style="text-align:right;font-family:Pacifico;color:#df719c">With all my love, ♡</p>
+</div>
+<button onclick="go(5);burst(100)">Continue to your gift 🎁</button>
+</section>
+
+<section id="page5" class="card">
+<div class="big">🎁</div>
+<h1>One Last Surprise!</h1>
+<p>Surpriseee, my favorite girl! 💗</p>
+<p>Even if I can't give you a big present today, I hope this little website makes you smile.</p>
+<div class="big">🧸🌷💗</div>
+<h1>I Love You!</h1>
+<p>Stay happy, stay healthy, and keep shining, sayanggg.</p>
+<p>Here's to many more birthdays together! ♡</p>
+<button onclick="burst(120)">Celebrate again! 🎉</button>
+</section>
+
+<div class="footer">Made with lots of love, just for you ♡</div>
+</main>
+
+<script>
+function go(n){
+ for(let i=1;i<=5;i++){
+  document.getElementById('page'+i).style.display='none';
+ }
+ document.getElementById('page'+n).style.display='block';
+ window.scrollTo({top:0,behavior:'smooth'});
+ burst(45);
+}
+function wish(){
+ document.getElementById('candle').textContent='🎂';
+ document.getElementById('wishText').textContent='Yayyy! Semoga semua doa kamu terkabul! 💗';
+ burst(100);
+}
+function burst(count){
+ const box=document.getElementById('confetti');
+ const colors=['#ff8fb1','#ffd166','#d8a7e8','#ffffff','#ffb4c9'];
+ for(let i=0;i<count;i++){
+  let e=document.createElement('span');
+  e.style.cssText=`position:absolute;left:${Math.random()*100}%;top:-15px;width:8px;height:10px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:3px;animation:fall ${2+Math.random()*3}s linear forwards`;
+  box.appendChild(e);
+  setTimeout(()=>e.remove(),5000);
+ }
+}
+let css=document.createElement('style');
+css.textContent='@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(css);
+
+let decorations=['💗','♡','🎀','✨','🌸'];
+for(let i=0;i<15;i++){
+ let e=document.createElement('div');
+ e.className='heart';
+ e.textContent=decorations[i%decorations.length];
+ e.style.left=Math.random()*100+'%';
+ e.style.animationDelay=Math.random()*9+'s';
+ e.style.fontSize=(15+Math.random()*20)+'px';
+ document.body.appendChild(e);
+}
+</script>
+</body>
+</html>
